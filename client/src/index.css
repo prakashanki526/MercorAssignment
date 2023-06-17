@@ -13,3 +13,16 @@ line-height: 19px;
 
 color: #787486;
 }
+
+.box{
+  overflow: hidden;
+}
+
+.box>div{
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
