@@ -14,35 +14,76 @@ import TodayIcon from '../assets/icons/TodayIcon';
 import ShareIcon from '../assets/icons/ShareIcon';
 import ListIcon from '../assets/icons/ListIcon';
 import GridIcon from '../assets/icons/GridIcon';
-// import Card1 from '../components/Card1';
 import Bluedot from '../assets/icons/Bluedot';
 import Greendot from '../assets/icons/Greendot';
 import Orangedot from '../assets/icons/Orangedot';
-// import Card2 from '../components/Card2';
-// import Card3 from '../components/Card3';
-// import Card4 from '../components/Card4';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import Task from '../components/Task';
+import img1 from '../assets/images/unsplash_MicqqGyDQ6w.png'
+import img2 from '../assets/images/unsplash_BS_1XGRkIH4.png'
+import img3 from '../assets/images/unsplash_KIqJfzbII9w.png'
+import img4 from '../assets/images/Plant Care App (Dribbble shot) 1.png'
 
 const Home = () => {
     const [todo, setTodo] = useState([
         {
             priority: "Low",
-            content: "ahv shah avh shvh",
+            content: "Brainstorming brings team members' diverse experience into play. ",
             imgList: [],
             id: '1',
-            title: "Title"
+            title: "Brainstorming",
+            comments: '12',
+            files: '0'
         },
         {
-            priority: "Low",
-            content: "shah avh shvh",
+            priority: "High",
+            content: "User research helps you to create an optimal product for users.",
             imgList: [],
             id: '2',
-            title: "Title 2"
+            title: "Research",
+            comments: '10',
+            files: '2'
+        },
+        {
+            priority: "High",
+            content: " Low fidelity wireframes include the most basic content and visuals.",
+            imgList: [],
+            id: '3',
+            title: "Wireframing",
+            comments: '8',
+            files: '5'
         }
     ])
-    const [inProgress, setInProgress] = useState([])
-    const [completed, setCompleted] = useState([])
+    const [inProgress, setInProgress] = useState([
+        {
+            priority: "Low",
+            content: "",
+            imgList: [img1],
+            id: '4',
+            title: "Onboarding Illustrations ",
+            comments: '18',
+            files: '3'
+        },{
+            priority: "High",
+            content: "",
+            imgList: [img2, img3],
+            id: '5',
+            title: "Onboarding Illustrations ",
+            comments: '3',
+            files: '0'
+        }
+    ])
+    const [completed, setCompleted] = useState([
+        {
+            priority: "Completed",
+            content: "",
+            imgList: [img4],
+            id: '6',
+            title: "Mobile App Design",
+            comments: '9',
+            files: '4'
+        }
+    ])
 
     // const td = [
     //     {
@@ -103,26 +144,32 @@ const Home = () => {
     return (
         <DragDropContext onDragEnd={handleDragEnd}>
             <div className='h-screen flex'>
-                <div className='sidebarContainer w-[16vw] h-full'>
+                <div className='sidebarContainer w-[16vw] h-full hidden lg:block'>
                     <Sidebar />
                 </div>
 
-                <div className='w-[84vw] flex flex-col h-screen border-l-[1px]'>
+                <div className='w-full lg:w-[84vw] flex flex-col h-screen border-l-[1px]'>
                     <div className='topbarContainer w-full'>
                         <Topbar />
                     </div>
-                    <div className='w-full px-12'>
+                    <div className='w-full px-3 md:px-6 lg:px-12'>
                         <div className='w-full flex justify-between items-center my-10'>
                             <div className='flex items-center space-x-3'>
-                                <div className='text-[46px] leading-[55.67px] font-semibold text-black'>Mobile App</div>
+                                <div className='text-[25px] leading-[25px] lg:text-[46px] lg:leading-[55.67px] font-semibold text-black'>Mobile App</div>
+                                <div className='cursor-pointer hover:scale-110 transition-all hidden lg:block'>
+                        
                                 <PencilIcon />
+                    </div>
+                    <div className='cursor-pointer hover:scale-110 transition-all hidden lg:block'>
+                        
                                 <LinkIcon />
+                    </div>
                             </div>
 
                             <div className='flex items-center space-x-3'>
-                                <div className='flex items-center space-x-1'>
+                                <div className='flex items-center space-x-1 group'>
                                     <AddInvite />
-                                    <div className='text-[#5030e5] font-medium'>Invite</div>
+                                    <div className='text-[#5030e5] font-medium group-hover:font-bold transition-all cursor-pointer'>Invite</div>
                                 </div>
                                 <div className='flex -space-x-2'>
                                     <img src={inviteImg1} alt='' className='' />
@@ -136,13 +183,13 @@ const Home = () => {
 
                         <div className='w-full flex justify-between'>
                             <div className='flex space-x-3'>
-                                <div className='h-[40px] w-[122px] border-2 border-gray-400 rounded-[6px] flex items-center justify-between px-4'>
+                                <div className='h-[40px] w-[122px] border-2 border-gray-400 rounded-[6px] flex items-center justify-between px-4 cursor-pointer hover:border-gray-600'>
                                     <FilterIcon />
                                     <div className=''>Filter</div>
                                     <DownArrow />
                                 </div>
 
-                                <div className='h-[40px] w-[122px] border-2 border-gray-400 rounded-[6px] flex items-center px-4 space-x-2'>
+                                <div className='h-[40px] w-[122px] border-2 border-gray-400 rounded-[6px] flex items-center px-4 space-x-2 cursor-pointer hover:border-gray-600'>
                                     <TodayIcon />
                                     <div className=''>Today</div>
                                     <DownArrow />
@@ -150,25 +197,25 @@ const Home = () => {
                             </div>
 
                             <div className='flex items-center space-x-4'>
-                                <div className='h-[40px] w-[97px] border-2 border-gray-400 rounded-[6px] flex items-center px-4 space-x-2'>
+                                <div className='h-[40px] w-[97px] border-2 border-gray-400 rounded-[6px] flex items-center px-4 space-x-2 cursor-pointer hover:border-gray-600'>
                                     <ShareIcon />
                                     <div className=''>Share</div>
                                 </div>
 
-                                <div className='h-[90%] border-r border-gray-400'></div>
+                                <div className='h-[90%] border-r border-gray-400 hidden lg:block'></div>
 
-                                <div className=''>
+                                <div className='cursor-pointer hidden lg:block'>
                                     <ListIcon />
                                 </div>
-                                <div className=''>
+                                <div className='cursor-pointer hidden lg:block'>
                                     <GridIcon />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className='w-full px-12 flex justify-between gap-6 mt-10 box'>
-                        <div className='w-[30%] rounded-xl bg-[#f5f5f5] p-4 flex flex-col'>
+                    <div className='w-full px-3 md:px-6 lg:px-12 flex justify-between gap-2 lg:gap-6 mt-10 box'>
+                        <div className='w-[48%] lg:w-[30%] rounded-xl bg-[#f5f5f5] p-4 flex flex-col'>
                             <div className='flex justify-between items-center'>
                                 <div className='flex space-x-3 items-center'>
                                     <Bluedot />
@@ -194,7 +241,7 @@ const Home = () => {
                         </div>
 
 
-                        <div className='w-[30%] rounded-t-xl bg-[#f5f5f5] p-4 flex flex-col'>
+                        <div className='w-[48%] lg:w-[30%] rounded-t-xl bg-[#f5f5f5] p-4 flex flex-col'>
                             <div className='flex justify-between items-center'>
                                 <div className='flex space-x-3 items-center'>
                                     <Orangedot />
@@ -220,7 +267,7 @@ const Home = () => {
                             </Droppable>
                         </div>
 
-                        <div className='w-[30%] rounded-t-xl bg-[#f5f5f5] p-4 overflow-hidden flex flex-col'>
+                        <div className='w-[48%] lg:w-[30%] rounded-t-xl bg-[#f5f5f5] p-4 overflow-hidden flex flex-col'>
                             <div className='flex justify-between items-center'>
                                 <div className='flex space-x-3 items-center'>
                                     <Greendot />

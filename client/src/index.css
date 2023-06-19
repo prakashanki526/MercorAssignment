@@ -14,6 +14,13 @@ line-height: 19px;
 color: #787486;
 }
 
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 12px;
+line-height: 13px;
+  }
+}
+
 .box{
   overflow: hidden;
 }

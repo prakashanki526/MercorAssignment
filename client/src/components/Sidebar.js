@@ -23,40 +23,43 @@ const Sidebar = () => {
                     <SideIcon />
                     <div className='text-black text-[20px] font-semibold'>Project M.</div>
                 </div>
-                <Sidewrap />
+                <div className='cursor-pointer'>
+
+                    <Sidewrap />
+                </div>
             </div>
 
             <div className='px-3'>
                 <div className='mt-3'>
-                    <div className='flex space-x-3 items-center px-4 py-2'>
+                    <div className='flex space-x-3 items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-[#f5f5f5]'>
                         <div className=''>
                             <HomeIcon />
                         </div>
                         <div className='flex justify-center'>Home</div>
                     </div>
 
-                    <div className='flex space-x-3 items-center px-4 py-2'>
+                    <div className='flex space-x-3 items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-[#f5f5f5]'>
                         <div className=''>
                             <MessageIcon />
                         </div>
                         <div className='flex justify-center'>Messages</div>
                     </div>
 
-                    <div className='flex space-x-3 items-center px-4 py-2'>
+                    <div className='flex space-x-3 items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-[#f5f5f5]'>
                         <div className=''>
                             <TasksIcon />
                         </div>
                         <div className='flex justify-center'>Tasks</div>
                     </div>
 
-                    <div className='flex space-x-3 items-center px-4 py-2'>
+                    <div className='flex space-x-3 items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-[#f5f5f5]'>
                         <div className=''>
                             <MembersIcon />
                         </div>
                         <div className='flex justify-center'>Members</div>
                     </div>
 
-                    <div className='flex space-x-3 items-center px-4 py-2'>
+                    <div className='flex space-x-3 items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-[#f5f5f5]'>
                         <div className=''>
                             <SettingIcon />
                         </div>
@@ -69,39 +72,39 @@ const Sidebar = () => {
                 <div className='mt-3'>
                     <div className='flex items-center justify-between py-2 px-4'>
                         <div className='text-[#787486] text-[12px] uppercase font-semibold'>my projects</div>
-                        <div className=''>
+                        <div className='cursor-pointer hover:scale-110 transition-all'>
                             <AddIcon />
                         </div>
                     </div>
 
-                        <div className='flex justify-between items-center px-4 py-2 bg-[#f5f5f5] rounded-lg'>
-                            <div className='flex space-x-3 items-center'>
-                                <div className=''>
-                                    <Greendot />
-                                </div>
-                                <div className='flex justify-center font-semibold text-black'>Mobile App</div>
-                            </div>
-
+                    <div className='flex justify-between items-center px-4 py-2 bg-[#f5f5f5] rounded-lg'>
+                        <div className='flex space-x-3 items-center'>
                             <div className=''>
-                                <ThreeDots />
+                                <Greendot />
                             </div>
+                            <div className='flex justify-center font-semibold text-black'>Mobile App</div>
                         </div>
 
-                        <div className='flex space-x-3 items-center px-4 py-2'>
+                        <div className=''>
+                            <ThreeDots />
+                        </div>
+                    </div>
+
+                    <div className='flex space-x-3 items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-[#f5f5f5]'>
                         <div className=''>
                             <Orangedot />
                         </div>
                         <div className='flex justify-center'>Web Redesign</div>
                     </div>
 
-                    <div className='flex space-x-3 items-center px-4 py-2'>
+                    <div className='flex space-x-3 items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-[#f5f5f5]'>
                         <div className=''>
                             <Greydot />
                         </div>
                         <div className='flex justify-center'>Design Systems</div>
                     </div>
 
-                    <div className='flex space-x-3 items-center px-4 py-2'>
+                    <div className='flex space-x-3 items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-[#f5f5f5]'>
                         <div className=''>
                             <Bluedot />
                         </div>
@@ -121,7 +124,7 @@ const Sidebar = () => {
 
                         <div className='text-center text-[12px] leading-[14.52px] my-1'>We don’t have any notice for you, till then you can share your thoughts with your peers.</div>
 
-                        <div className='my-2 h-[40px] w-full bg-white rounded-[4px] flex items-center justify-center text-center text-black text-[14px] font-medium'>Write a message</div>
+                        <div className='my-2 h-[40px] w-full bg-white rounded-[4px] flex items-center justify-center text-center text-black text-[14px] font-medium cursor-pointer'>Write a message</div>
                     </div>
 
                 </div>
