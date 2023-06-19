@@ -74,7 +74,7 @@ const Sidebar = () => {
                         </div>
                     </div>
 
-                        <div className='flex justify-between items-center px-4 py-2 bg-slate-100 rounded-lg'>
+                        <div className='flex justify-between items-center px-4 py-2 bg-[#f5f5f5] rounded-lg'>
                             <div className='flex space-x-3 items-center'>
                                 <div className=''>
                                     <Greendot />
@@ -110,8 +110,8 @@ const Sidebar = () => {
                 </div>
 
                 <div className='flex w-full justify-center absolute bottom-8 left-0'>
-                    <div className='w-[206px] flex flex-col items-center bg-slate-100 h-[200px] relative rounded-2xl px-5'>
-                        <div className='h-[3rem] w-[3rem] -mt-[1.5rem] rounded-full overflow-hidden flex justify-center items-center bg-slate-100'>
+                    <div className='w-[206px] flex flex-col items-center bg-[#f5f5f5] h-[200px] relative rounded-2xl px-5'>
+                        <div className='h-[3rem] w-[3rem] -mt-[1.5rem] rounded-full overflow-hidden flex justify-center items-center bg-[#f5f5f5]'>
                             <div className=''>
                                 <BulbIcon />
                             </div>

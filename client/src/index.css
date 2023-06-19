@@ -19,8 +19,10 @@ color: #787486;
 }
 
 .box>div{
-  flex-grow: 1;
-  overflow-y: auto;
+  /* flex-grow: 1; */
+  /* overflow-y: auto; */
+
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
